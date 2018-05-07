@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>蘑菇的个人主页</title>
+<style type="text/css">
+<!--
+.fcb {
+	font-family: "黑体";
+	font-size: 20px;
+	color: #591797;
+	text-align: center;
+}
+.f {
+	font-family: "黑体";
+	font-size: 50px;
+	color: #F00;
+}
+.w {
+	color: #30F;
+	font-family: "华文行楷";
+}
+.i {
+	font-family: "华文行楷";
+}
+.q {
+	color: #303;
+	font-family: "华文新魏";
+}
+.f marquee .i {
+	font-size: 40px;
+}
+-->
+</style></head>
+
+<body background="tito.jpg">
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<table width="80%" border="0" align="center">
+  <tr>
+    <td class="f">
+      <center>
+      <span class="i">欢迎来到蘑菇个人主页</span>
+      </center>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table width="80%" border="0" align="center">
+  <tr>
+    <th width="31%" scope="col">巴萨简介</th>
+    
+    <th width="29%" scope="col">巴萨相册</th>
+  </tr>
+  <tr>
+    <td class="fcb"><a href="http://baike.baidu.com/link?url=KUo5ce8NYmsiPA_SU9Cz6vIOWsBuZCTzJdKv7HfuEnEs9SEixz4SYPFzJQC9oWn0zsocnUAIIisKWCQPdlDMLq" style="text-decoration: none">百科</a></td>
+   
+    <td class="fcb"><a href="球员合集.html"style="text-decoration: none">球员合集</a></td>
+  </tr>
+  <tr>
+    <td class="fcb"><a href="http://weibo.com/barcanews"style="text-decoration: none">新闻</a></td>
+    
+    <td class="fcb"><a href="我心红蓝.html"style="text-decoration: none">我心红蓝</a></td>
+  </tr>
+</table>
+<p class="fcb">&nbsp;</p>
+<style type="text/css">
+.spanstyle {
+COLOR: #00cccc; FONT-FAMILY: 宋体; FONT-SIZE: 16pt; POSITION: absolute; TOP: -50px; VISIBILITY: visible
+}
+</style>
+<script>
+var x,y
+var step=24
+var flag=0
+var message="Mes que un club!I am Mushroom.TE AMO FCB=3= "
+
+message=message.split("")
+var xpos=new Array()
+for (i=0;i<=message.length-1;i++) {
+xpos[i]=-50
+}
+
+var ypos=new Array()
+for (i=0;i<=message.length-1;i++) {
+ypos[i]=-200
+}
+
+function handlerMM(e){
+x = (document.layers) ? e.pageX : document.body.scrollLeft+event.clientX
+y = (document.layers) ? e.pageY : document.body.scrollTop+event.clientY
+flag=1
+}
+
+function www_helpor_net() {
+if (flag==1 && document.all) {
+for (i=message.length-1; i>=1; i--) {
+xpos[i]=xpos[i-1]+step
+ypos[i]=ypos[i-1]
+}
+xpos[0]=x+step
+ypos[0]=y
+
+for (i=0; i<message.length-1; i++) {
+var thisspan = eval("span"+(i)+".style")
+thisspan.posLeft=xpos[i]
+thisspan.posTop=ypos[i]
+}
+}
+
+else if (flag==1 && document.layers) {
+for (i=message.length-1; i>=1; i--) {
+xpos[i]=xpos[i-1]+step
+ypos[i]=ypos[i-1]
+}
+xpos[0]=x+step
+ypos[0]=y
+
+for (i=0; i<message.length-1; i++) {
+var thisspan = eval("document.span"+i)
+thisspan.left=xpos[i]
+thisspan.top=ypos[i]
+}
+}
+var timer=setTimeout("www_helpor_net()",30)
+}
+
+for (i=0;i<=message.length-1;i++) {
+document.write("<span id='span"+i+"' class='spanstyle'>")
+document.write(message[i])
+document.write("</span>")
+}
+
+if (document.layers){
+document.captureEvents(Event.MOUSEMOVE);
+}
+document.onmousemove = handlerMM;
+www_helpor_net();
+// -->
+</script>
+   <bgsound src="The Script - Hall of Fame.mp3" loop="-1" />
+</body>
+</html>

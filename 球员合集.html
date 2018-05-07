@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>球员合集</title>
+<style type="text/css">
+<!--
+.e {
+	font-family: "黑体";
+	font-size: 60px;
+	color: #609;
+}
+.k {
+	font-family: "黑体";
+	font-size: 30px;
+	color: #F00;
+}
+.e marquee {
+	font-size: 50px;
+}
+-->
+</style>
+</head>
+
+<body background="诺坎普.jpg">
+<p>
+  <script>
+var a=new Array("唇.jpg","梅西.jpg","梅西亲吻队徽.jpg","哈梅对视.jpg","普约尔哈维.jpg","阿比叔.jpg","adios瓜瓜.jpg","团结.jpg","夺冠.jpg","庆祝.jpg","红蓝庆祝.jpg");
+var i=0;
+function change()
+{
+  document .getElementById ("image").src=a[i];
+  i++;
+  if(i==11)
+  {
+   i=0;
+  }
+}</script>
+  </head>
+  <body>
+</p>
+<table width="80%" border="0" align="center">
+  <tr><center>
+    <td class="e"><span class="k">请点击中间的图... </span>
+    </td>
+    </center>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<table align="center">
+  <tr>
+<td onclick="change()"><img id="image" src="唇.jpg" width="600px" height="450px"/></td>
+</tr>
+</table>
+<bgsound src="river flows in you.mp3" />
+
+</body>
+</html>
